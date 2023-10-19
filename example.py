@@ -28,7 +28,7 @@ model = sb.BoostingClassifier(
 
 model = model.fit(X_fit, y_fit, eval_set=(X_val, y_val))
 
-y_pred = model.predict_proba(X_val)
+#y_pred = model.predict_proba(X_val)
 
 # print(metrics.roc_auc_score(y_val, y_pred[:, 1]))
 print(f"\n\n\nScore: {metrics.accuracy_score(y_val, model.predict(X_val))}\n\n\n")
